@@ -1,0 +1,6 @@
+@RPSLS.WebApi_HostAddress = http://localhost:5104
+
+GET {{RPSLS.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
