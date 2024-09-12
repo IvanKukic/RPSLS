@@ -17,6 +17,6 @@ public class Handsign
     {
         var actualType = (HandsignType)type;
         HandsignType = actualType;
-        Name = actualType.ToString();
+        Name = actualType.ToString().ToLower();
     }
 }
