@@ -78,7 +78,7 @@ public class GameControllerTests
 
 		var responseDto = result.Value as PlayResponseDto;
 		Assert.NotNull(responseDto);
-		Assert.Equal(playResponse.Result, responseDto.Result);
+		Assert.Equal(playResponse.Result, responseDto.Results);
 		Assert.Equal(playResponse.PlayerChoice, responseDto.Player);
 		Assert.Equal(playResponse.ComputerChoice, responseDto.Computer);
 	}

@@ -2,7 +2,7 @@
 
 namespace RPSLS.Application.Models;
 
-internal class RandomDto
+public class RandomDto
 {
     [JsonPropertyName("random_number")]
     public int RandomNumber { get; init; }
