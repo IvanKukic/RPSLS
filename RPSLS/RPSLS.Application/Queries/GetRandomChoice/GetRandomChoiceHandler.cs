@@ -1,6 +1,5 @@
 ﻿using MediatR;
-using Microsoft.VisualBasic;
-using RPSLS.Application.Services;
+using RPSLS.Application.Interfaces;
 using RPSLS.Domain.Entities;
 
 namespace RPSLS.Application.Queries.GetRandomChoice;
@@ -8,9 +7,9 @@ namespace RPSLS.Application.Queries.GetRandomChoice;
 public class GetRandomChoiceHandler : IRequestHandler<GetRandomChoiceQuery, Handsign>
 {
 
-	private readonly RandomNumberHttpService _randomNumberHttpService;
+	private readonly IRandomNumberHttpService _randomNumberHttpService;
 
-	public GetRandomChoiceHandler(RandomNumberHttpService randomNumberHttpService)
+	public GetRandomChoiceHandler(IRandomNumberHttpService randomNumberHttpService)
 	{
 		_randomNumberHttpService = randomNumberHttpService;
 	}
