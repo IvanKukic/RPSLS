@@ -6,6 +6,8 @@ using System.Net;
 using System.Net.Http.Headers;
 using System.Text.Json;
 
+namespace RPSLS.Tests.Application;
+
 public class RandomNumberHttpServiceTests
 {
 	private readonly Mock<IHttpClientFactory> _httpClientFactoryMock;

@@ -1,5 +1,4 @@
 ﻿using MediatR;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using RPSLS.Application.Commands.Play;
@@ -7,6 +6,8 @@ using RPSLS.Application.Queries.GetRandomChoice;
 using RPSLS.Domain.Enums;
 using RPSLS.WebApi.Controllers;
 using RPSLS.WebApi.Models;
+
+namespace RPSLS.Tests.WebApi;
 
 public class GameControllerTests
 {

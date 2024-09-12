@@ -1,8 +1,9 @@
 ﻿using Moq;
 using RPSLS.Application.Commands.Play;
 using RPSLS.Application.Interfaces;
-using RPSLS.Application.Services;
 using RPSLS.Domain.Enums;
+
+namespace RPSLS.Tests.Application;
 
 public class PlayHandlerTests
 {

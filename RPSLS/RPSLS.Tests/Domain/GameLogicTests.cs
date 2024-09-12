@@ -1,6 +1,8 @@
 ﻿using RPSLS.Domain.Enums;
 using RPSLS.Domain.Logic;
 
+namespace RPSLS.Tests.Domain;
+
 public class GameLogicTests
 {
 	[Theory]
