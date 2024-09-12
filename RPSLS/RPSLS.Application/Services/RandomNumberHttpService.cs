@@ -1,5 +1,6 @@
 ﻿using RPSLS.Application.Interfaces;
 using RPSLS.Application.Models;
+using System.Net;
 using System.Text.Json;
 
 namespace RPSLS.Application.Services;
@@ -15,10 +16,20 @@ public class RandomNumberHttpService : IRandomNumberHttpService
 
 	public async Task<int> GetRandomNumber()
 	{
-		var response = await _httpClient.GetAsync("/random");
+		try
+		{
+			var response = await _httpClient.GetAsync("/random");
 
-        var responseData = await JsonSerializer.DeserializeAsync<RandomDto>(response.Content.ReadAsStream());
+			response.EnsureSuccessStatusCode();
+			var responseData = await JsonSerializer.DeserializeAsync<RandomDto>(response.Content.ReadAsStream());
 
-		return responseData!.RandomNumber;
+			return responseData!.RandomNumber;
+		}
+		catch(Exception ex)
+		{
+			//TODO: set up serilog for more robust logging
+			Console.WriteLine(ex.Message);
+			return new Random().Next(1, 100);
+		}
 	}
 }
