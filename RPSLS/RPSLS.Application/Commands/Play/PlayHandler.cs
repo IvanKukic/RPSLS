@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using RPSLS.Application.Services;
 using RPSLS.Domain.Enums;
+using RPSLS.Domain.Logic;
 
 namespace RPSLS.Application.Commands.Play;
 
@@ -15,9 +16,9 @@ public class PlayHandler : IRequestHandler<PlayCommand, PlayResponse>
 
 	public async Task<PlayResponse> Handle(PlayCommand request, CancellationToken cancellationToken)
 	{
-		//TODO: create logic to cover core game functionality
 		var number = await _randomNumberHttpService.GetRandomNumber();
-		ChoiceType computerChoice = (ChoiceType)((number % 5) + 1);
-		return new PlayResponse((computerChoice == request.Player).ToString(), request.Player, computerChoice);
+		HandsignType computerChoice = (HandsignType)((number % 5) + 1);
+		var gameResult = GameLogic.DetermineWinner(request.Player, computerChoice);
+		return new PlayResponse(gameResult, request.Player, computerChoice);
 	}
 }

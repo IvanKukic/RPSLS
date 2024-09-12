@@ -24,16 +24,16 @@ public class GameController : ControllerBase
     /// <returns>List of choices</returns>
     [HttpGet("choices")]
     [Consumes("application/json")]
-    [ProducesResponseType(typeof(IEnumerable<ChoiceDto>), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(IEnumerable<Handsign>), StatusCodes.Status200OK)]
     public IActionResult ListChoices()
     {
-        List<ChoiceDto> result =
+        List<Handsign> result =
         [
-            ChoiceDto.CreateFromEnumType(ChoiceType.Rock),
-            ChoiceDto.CreateFromEnumType(ChoiceType.Paper),
-            ChoiceDto.CreateFromEnumType(ChoiceType.Scissor),
-            ChoiceDto.CreateFromEnumType(ChoiceType.Lizard),
-            ChoiceDto.CreateFromEnumType(ChoiceType.Spock)
+            Handsign.CreateFromEnumType(HandsignType.Rock),
+            Handsign.CreateFromEnumType(HandsignType.Paper),
+            Handsign.CreateFromEnumType(HandsignType.Scissors),
+            Handsign.CreateFromEnumType(HandsignType.Lizard),
+            Handsign.CreateFromEnumType(HandsignType.Spock)
         ];
 
         return Ok(result);
@@ -45,7 +45,7 @@ public class GameController : ControllerBase
     /// <returns>Choice</returns>
     [HttpGet("choice")]
     [Consumes("application/json")]
-    [ProducesResponseType(typeof(ChoiceDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(Handsign), StatusCodes.Status200OK)]
     public async Task<IActionResult> GetChoice()
     {
         var result = await _mediator.Send(new GetRandomChoiceQuery());

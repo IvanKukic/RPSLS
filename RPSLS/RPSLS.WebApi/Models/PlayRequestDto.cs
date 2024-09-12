@@ -2,4 +2,4 @@
 
 namespace RPSLS.WebApi.Models;
 
-public record PlayRequestDto(ChoiceType Player);
+public record PlayRequestDto(HandsignType Player);

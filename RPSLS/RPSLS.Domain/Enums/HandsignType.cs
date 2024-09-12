@@ -1,10 +1,10 @@
 ﻿namespace RPSLS.Domain.Enums;
 
-public enum ChoiceType
+public enum HandsignType
 {
     Rock = 1,
     Paper = 2,
-    Scissor = 3,
+    Scissors = 3,
     Lizard = 4,
     Spock = 5
 }
