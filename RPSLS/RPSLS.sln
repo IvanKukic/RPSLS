@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPSLS.WebApi", "RPSLS.WebApi\RPSLS.WebApi.csproj", "{BB461202-4E87-4331-AC59-D9FF702741F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPSLS.WebApi", "RPSLS.WebApi\RPSLS.WebApi.csproj", "{BB461202-4E87-4331-AC59-D9FF702741F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPSLS.Application", "RPSLS.Application\RPSLS.Application.csproj", "{1DF8EDE6-199F-4FF8-AEA8-8BF9FC12F314}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPSLS.Application", "RPSLS.Application\RPSLS.Application.csproj", "{1DF8EDE6-199F-4FF8-AEA8-8BF9FC12F314}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPSLS.Domain", "RPSLS.Domain\RPSLS.Domain.csproj", "{AB07E01C-2799-49E9-A345-F6B7AAAFBBE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPSLS.Domain", "RPSLS.Domain\RPSLS.Domain.csproj", "{AB07E01C-2799-49E9-A345-F6B7AAAFBBE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPSLS.Tests", "RPSLS.Tests\RPSLS.Tests.csproj", "{0FBDD439-B926-4B59-8A45-EE65DE85C5CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{AB07E01C-2799-49E9-A345-F6B7AAAFBBE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB07E01C-2799-49E9-A345-F6B7AAAFBBE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB07E01C-2799-49E9-A345-F6B7AAAFBBE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FBDD439-B926-4B59-8A45-EE65DE85C5CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FBDD439-B926-4B59-8A45-EE65DE85C5CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FBDD439-B926-4B59-8A45-EE65DE85C5CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FBDD439-B926-4B59-8A45-EE65DE85C5CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
