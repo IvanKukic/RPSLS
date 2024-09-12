@@ -1,9 +1,10 @@
-﻿using RPSLS.Application.Models;
+﻿using RPSLS.Application.Interfaces;
+using RPSLS.Application.Models;
 using System.Text.Json;
 
 namespace RPSLS.Application.Services;
 
-public class RandomNumberHttpService
+public class RandomNumberHttpService : IRandomNumberHttpService
 {
     private readonly HttpClient _httpClient;
 

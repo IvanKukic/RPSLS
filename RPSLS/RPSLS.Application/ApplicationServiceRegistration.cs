@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using RPSLS.Application.Exceptions;
+using RPSLS.Application.Interfaces;
 using RPSLS.Application.Services;
 using System.Reflection;
 
@@ -25,6 +26,6 @@ public static class ApplicationServiceRegistration
                 config.BaseAddress = new Uri(baseUrl);
             }
             );
-        services.AddTransient<RandomNumberHttpService>();
+        services.AddTransient<IRandomNumberHttpService, RandomNumberHttpService>();
     }
 }

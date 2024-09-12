@@ -2,4 +2,4 @@
 
 namespace RPSLS.WebApi.Models;
 
-public record PlayResponseDto(string Results, HandsignType Player, HandsignType Computer);
+public record PlayResponseDto(string Result, HandsignType Player, HandsignType Computer);

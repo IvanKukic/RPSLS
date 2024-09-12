@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using RPSLS.Application.Services;
+using RPSLS.Application.Interfaces;
 using RPSLS.Domain.Enums;
 using RPSLS.Domain.Logic;
 
@@ -7,9 +7,9 @@ namespace RPSLS.Application.Commands.Play;
 
 public class PlayHandler : IRequestHandler<PlayCommand, PlayResponse>
 {
-	private readonly RandomNumberHttpService _randomNumberHttpService;
+	private readonly IRandomNumberHttpService _randomNumberHttpService;
 
-	public PlayHandler(RandomNumberHttpService randomNumberHttpService)
+	public PlayHandler(IRandomNumberHttpService randomNumberHttpService)
 	{
 		_randomNumberHttpService = randomNumberHttpService;
 	}

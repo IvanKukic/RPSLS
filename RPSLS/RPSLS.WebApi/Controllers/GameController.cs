@@ -48,7 +48,7 @@ public class GameController : ControllerBase
     [ProducesResponseType(typeof(Handsign), StatusCodes.Status200OK)]
     public async Task<IActionResult> GetChoice()
     {
-        var result = await _mediator.Send(new GetRandomChoiceQuery());
+        var result = await _mediator.Send(new GetRandomChoiceQuery(), default);
         return Ok(result);
     }
 

@@ -21,6 +21,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+//Adding cors so it can work with the test webpage
 app.UseCors(options =>
 {
 	options.AllowAnyOrigin();
